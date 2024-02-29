@@ -25,17 +25,19 @@
 <div><img src="https://github.com/emeryberger/web-programming/raw/master/decoder-ring.jpg" alt="image"></div>
 <body>
   <!-- TASK #2: Implement the user interface -->
-  <label for="key">Key:</label>
-  <input type="text" id="key">
-  <label for="encode">Text to Encode:</label>
-  <input type="text" id="encode">
-  <label for="encoded">Encoded =</label>
-  <input type="text" id="encoded" readonly disabled>
-  <label for="decode">Text to Decode:</label>
-  <input type="text" id="decode">
-  <label for="decoded">Decoded =</label>
-  <input type="text" id="decoded" readonly disabled>
-  <button type="button" onclick={doIt()}>Go</button>
+  <form>
+    <label for="key">Key:</label>
+    <input type="text" id="key">
+    <label for="encode">Text to Encode:</label>
+    <input type="text" id="encode">
+    <label for="encoded">Encoded =</label>
+    <input type="text" id="encoded" readonly disabled>
+    <label for="decode">Text to Decode:</label>
+    <input type="text" id="decode">
+    <label for="decoded">Decoded =</label>
+    <input type="text" id="decoded" readonly disabled>
+    <button type="button" onclick={doIt()}>Go</button>
+  </form>
 </body>
 
 </html>
