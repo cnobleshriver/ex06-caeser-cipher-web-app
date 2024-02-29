@@ -1,39 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Encoder/Decoder</title>
-    <script src="decoderRingClass.js"></script>
-    <script>
-      // TASK #3: Implement the doIt() function. This function will be called
-      // when the user clicks the "Go" button. It will create a new decoder and
-      // call its encode() and decode() methods.
-      'use strict';
-      function doIt() {
-        // Add your implementation here. Do not change the name of the function.
-        let key = document.getElementById("key").value;
-        let textToEncode = document.getElementById("encode").value;
-        let encodedText = document.getElementById("encoded");
-        let textToDecode = document.getElementById("decode").value;
-        let decodedText = document.getElementById("decoded");
-        let d = new decoder(key);
-        encodedText.value = d.encode(textToEncode);
-        decodedText.value = d.decode(textToDecode);
-      }
-    </script>
-  </head>
-  <img src="https://github.com/emeryberger/web-programming/raw/master/decoder-ring.jpg" alt="image">
-  <body>
-    <!-- TASK #2: Implement the user interface -->
-    <label for="key">Key:</label>
-    <input type="text" id="key">
-    <label for="encode">Text to Encode:</label>
-    <input type="text" id="encode">
-    <label for="encoded">Encoded =</label>
-    <input type="text" id="encoded" readonly disabled>
-    <label for="decode">Text to Decode:</label>
-    <input type="text" id="decode">
-    <label for="decoded">Decoded =</label>
-    <input type="text" id="decoded" readonly disabled>
-    <button type="button" onclick={doIt()}>Go</button>
-  </body>
+
+<head>
+  <title>Encoder/Decoder</title>
+  <script src="decoderRingClass.js"></script>
+  <script>
+    // TASK #3: Implement the doIt() function. This function will be called
+    // when the user clicks the "Go" button. It will create a new decoder and
+    // call its encode() and decode() methods.
+    'use strict';
+    function doIt() {
+      // Add your implementation here. Do not change the name of the function.
+      let key = document.getElementById("key").value;
+      let textToEncode = document.getElementById("encode").value;
+      let encodedText = document.getElementById("encoded");
+      let textToDecode = document.getElementById("decode").value;
+      let decodedText = document.getElementById("decoded");
+      let d = new decoder(key);
+      encodedText.value = d.encode(textToEncode);
+      decodedText.value = d.decode(textToDecode);
+    }
+  </script>
+</head>
+<div><img src="https://github.com/emeryberger/web-programming/raw/master/decoder-ring.jpg" alt="image"></div>
+<body>
+  <!-- TASK #2: Implement the user interface -->
+  <label for="key">Key:</label>
+  <input type="text" id="key">
+  <label for="encode">Text to Encode:</label>
+  <input type="text" id="encode">
+  <label for="encoded">Encoded =</label>
+  <input type="text" id="encoded" readonly disabled>
+  <label for="decode">Text to Decode:</label>
+  <input type="text" id="decode">
+  <label for="decoded">Decoded =</label>
+  <input type="text" id="decoded" readonly disabled>
+  <button type="button" onclick={doIt()}>Go</button>
+</body>
+
 </html>
